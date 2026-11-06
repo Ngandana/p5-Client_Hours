@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+/* Brand: Pillar 5 navy and gold. Navy carries actions, gold marks extra delivered hours. */
+:root {
+  --bg: #f3f5f9;
+  --surface: #ffffff;
+  --surface-2: #e7ebf3;
+  --ink: #0a1738;
+  --muted: #4b5876;
+  --line: #d2d9e6;
+  --accent: #0f2a66;
+  --accent-hover: #0a1738;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3e9f6;
+  --gold: #d49a35;
+  --seg: #0f2a66;
+  --seg-x: #d49a35;
+  --ok: #166534;
+  --ok-soft: #dcf2e3;
+  --warn: #8a5300;
+  --warn-soft: #fbefd2;
+  --bad: #b42318;
+  --bad-soft: #fbe1de;
+  --extra: #7a4e0a;
+  --extra-soft: #faedd3;
+  --d0: #1e3a8a;
+  --d1: #b8791c;
+  --d2: #0f766e;
+  --d3: #5b6b8c;
+  --d4: #0369a1;
+  --d5: #a21cae;
+  --focus: #0f2a66;
+  --shadow: 0 1px 2px rgba(10, 23, 56, 0.06), 0 6px 18px rgba(10, 23, 56, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #060d22;
+    --surface: #0d1a3a;
+    --surface-2: #142450;
+    --ink: #eef1f8;
+    --muted: #a9b5d0;
+    --line: #25386a;
+    --accent: #e3ae4f;
+    --accent-hover: #f0c57a;
+    --accent-ink: #0a1738;
+    --accent-soft: #1b2d5c;
+    --gold: #e3ae4f;
+    --seg: #7e9ae6;
+    --seg-x: #f0c57a;
+    --ok: #5be08f;
+    --ok-soft: #153626;
+    --warn: #f7c948;
+    --warn-soft: #3a3013;
+    --bad: #ff8a80;
+    --bad-soft: #40201f;
+    --extra: #f0c57a;
+    --extra-soft: #3a2d12;
+    --d0: #8fa8e8;
+    --d1: #e3ae4f;
+    --d2: #34d3bd;
+    --d3: #a9b5d0;
+    --d4: #56c2f5;
+    --d5: #f08af0;
+    --focus: #f0c57a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-extra: var(--extra);
+  --color-extra-soft: var(--extra-soft);
+  --font-sans: var(--font-public-sans), system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --shadow-card: var(--shadow);
+  --radius-card: 10px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  /* Fills the notch area on phones so the sticky header does not show content behind it. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 30;
+    background: var(--surface);
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  a {
+    color: var(--accent);
+  }
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  input,
+  select,
+  textarea {
+    font: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    min-height: 44px;
+    padding: 8px 12px;
+    width: 100%;
+    transition: border-color 0.18s;
+  }
+  textarea {
+    min-height: 88px;
+    resize: vertical;
+  }
+  input:hover,
+  select:hover,
+  textarea:hover {
+    border-color: var(--muted);
+  }
+  input[aria-invalid="true"],
+  textarea[aria-invalid="true"] {
+    border-color: var(--bad);
+  }
+  select {
+    cursor: pointer;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--surface-2);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  tr:last-child td {
+    border-bottom: 0;
+  }
+  tfoot td {
+    font-weight: 700;
+    background: var(--surface-2);
+  }
+}
+
+@layer utilities {
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+  .pulse-on {
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media print {
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+}
