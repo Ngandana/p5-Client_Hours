@@ -75,12 +75,12 @@ All business rules live in `src/lib` as plain functions and are covered by `src/
 
 ## Sample data
 
-The demo has a sample team (12 people in ICT, Acquisitions, Marketing and Management) and sample entries:
+The demo has a sample team (16 people in ICT, Acquisitions, Marketing and Management) and sample entries:
 
 - **Last cycle:** 52.5 approved hours, which is 7.5 hours above the 45 paid hours.
 - **This cycle:** about 27.5 approved hours, plus a few entries waiting for approval.
 
-The names, except mine and Mrs Candice, are made up. Replace them with the real team using `docs/AIRTABLE-PROMPT.md`.
+The names, except those of the real Pillar 5 people, are made up. Replace them with the real team using `docs/AIRTABLE-PROMPT.md`.
 
 ## Branding
 

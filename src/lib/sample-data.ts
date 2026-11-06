@@ -106,6 +106,8 @@ export function sampleData(now: Date = new Date()): AppData {
     staff: [
       { id: "sib", name: "Sibabalwe Ngandana", role: "Software Developer", dept: "ict" },
       { id: "thabo", name: "Thabo Mokoena", role: "Web Developer", dept: "ict" },
+      { id: "sthembiso", name: "Sthembiso Mthembu", role: "Software Developer", dept: "ict" },
+      { id: "odwa", name: "Odwa Manitshana", role: "Software Developer", dept: "ict" },
       { id: "aisha", name: "Aisha Daniels", role: "IT Support Technician", dept: "ict" },
       { id: "lerato", name: "Lerato Khumalo", role: "Acquisitions Lead", dept: "acq" },
       { id: "johan", name: "Johan van Wyk", role: "Business Development Officer", dept: "acq" },
@@ -115,7 +117,9 @@ export function sampleData(now: Date = new Date()): AppData {
       { id: "kayla", name: "Kayla Adams", role: "Social Media Manager", dept: "mkt" },
       { id: "sipho", name: "Sipho Ndlovu", role: "Content Writer", dept: "mkt" },
       { id: "candice", name: "Mrs Candice", role: "Manager", dept: "mgt" },
+      { id: "gabi", name: "Mrs Gabi", role: "Manager", dept: "mgt" },
       { id: "megan", name: "Megan Fortuin", role: "Project Manager", dept: "mgt" },
+      { id: "cole", name: "Mr Cole Davids", role: "CEO", dept: "mgt" },
     ],
     projects: [
       { id: "web", name: "Website and booking system" },
