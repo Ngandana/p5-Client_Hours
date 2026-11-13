@@ -4,7 +4,7 @@ Use this when you show the demo to Mrs Candice. Read it in your own words.
 
 ## Before you start
 
-- Run `npm run dev` and open http://localhost:3000 in Chrome.
+- Run `npm run present` and open http://localhost:3000 in Chrome. See `docs/PRESENTING.md` for other ways to show it.
 - Go to **Manager > Team and settings > Reset demo data** so the sample data is fresh.
 - Switch back to **Staff**.
 
@@ -44,7 +44,7 @@ Say: "Only approved hours count. This makes the report trustworthy for the clien
 
 1. Switch to **Client**.
 2. Click the **left arrow** to go to the last cycle.
-3. Read the purple sentence: "Pillar 5 delivered 52.5 hours. That is 7.5 hours more than the 45 paid hours."
+3. Read the gold box: "Pillar 5 delivered 52.5 hours. That is 7.5 hours more than the 45 paid hours."
 4. Scroll to the **Work log**. Every line is approved work.
 5. Show **Download CSV** and **Print or save PDF**.
 
